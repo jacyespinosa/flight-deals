@@ -18,6 +18,9 @@ class DataManager:
         self.destination = data["prices"]
         return self.destination
 
+    '''
+    Make a PUT request and use the row id from sheet_data to update the Google Sheet with the IATA codes. 
+    '''
     def update_rows(self):
         for city in self.destination:
             updated_data = {"price": {"iataCode": city["iataCode"]}}
