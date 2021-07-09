@@ -1,5 +1,17 @@
 from data_manager import DataManager
 from flight_search import FlightSearch
+import datetime
+
+today = datetime.datetime.today()
+next_6_months = datetime.datetime.now() + datetime.timedelta(days = 6*30)
+min_return_date = datetime.datetime.now() + datetime.timedelta(days = 7)
+max_return_date = datetime.datetime.now() + datetime.timedelta(days = 28)
+
+date_from = today.strftime("%d/%m/%Y")
+date_to = next_6_months.strftime("%d/%m/%Y")
+return_from = min_return_date.strftime("%d/%m/%Y")
+return_to = max_return_date.strftime("%d/%m/%Y")
+
 
 data = DataManager()
 sheety_data = data.get_data()
@@ -16,3 +28,6 @@ if sheety_data[0]['iataCode'] == '':
         item['iataCode'] = flight.get_destination_code(item['city'])
 
 data.update_rows()
+
+for city in sheety_data:
+    deals = flight.get_deals(fly_city_from="SFO", fly_city_to=city["iataCode"], date_from=date_from, date_to=date_to)
