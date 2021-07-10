@@ -1,5 +1,6 @@
 '''
-FlightData class represents the flight data. e.g. price, departure_airport_code, departure_city_code and etc.
+FlightData class represents the flight data. e.g. price, departure_airport_code, departure_city_code and etc from
+the KIWI API.
 '''
 
 
