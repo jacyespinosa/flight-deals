@@ -1,4 +1,8 @@
 # flight-deals
+GOING SOMEWHERE? WANT TO SAVE MONEY? TIRED OF CHECKING AIRLINE/TRAVEL AGENCY WEBSITES?
+GET NOTIFIED WHENEVER THERE IS A FLIGHT DEAL!
+
+
 APIs Required
 -Google Sheet Data Management - https://sheety.co/
 
